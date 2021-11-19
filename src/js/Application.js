@@ -19,7 +19,7 @@ export default class Application extends EventEmitter {
 	this._beat.on(Beat.events.BIT, (bit) => {
     const message = document.createElement("div");
     message.classList.add("message");
-    message.innerText = "Ah";
+    message.innerText = lyrics[bit];
 
     document.querySelector(".main").appendChild(message);
 	})
