@@ -8,8 +8,8 @@ export default class Application extends EventEmitter {
     };
   }
 
-  constructor(beat) {
-    super(beat);
+  constructor(beat, create) {
+    super(beat, create);
 	this._beat = new Beat()
 	this._create = new Create()
   
