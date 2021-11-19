@@ -11,7 +11,7 @@ export default class Application extends EventEmitter {
   constructor(beat, create) {
     super(beat);
 	this._beat = new Beat()
-	this._create();
+	this._create = new Create()
 	
     const lyrics = ["Ah", "ha", "ha", "ha", "stayin' alive", "stayin' alive"];
     let count = 0;
