@@ -20,7 +20,6 @@ export default class Application extends EventEmitter {
     message.innerText = "Ah";
 
     document.querySelector(".main").appendChild(message);
-	this.emit(Beat.events.Bit)
     this.emit(Application.events.READY);
   }
 }
