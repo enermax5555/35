@@ -5,9 +5,12 @@ export default class Beat {
     };
   }
 
-  constructor() {
+  constructor(beat) {
+	  this.beat = beat
     setInterval(() => {
       console.log("bit");
+	  this.emit(Beat.events.BIT);
     }, 600);
+	
   }
 }
