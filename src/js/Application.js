@@ -15,14 +15,19 @@ export default class Application extends EventEmitter {
 	
     const lyrics = ["Ah", "ha", "ha", "ha", "stayin' alive", "stayin' alive"];
     let count = 0;
-	
+	if (count == 6 ) {
+		count = 0;
+	}
 	this._beat.on(Beat.events.BIT, (bit) => {
 		this.emit(Beat.events.BIT);
     const message = document.createElement("div");
     message.classList.add("message");
+	for (let i = 0, i < 1; i++) {
     message.innerText = lyrics[bit];
 
     document.querySelector(".main").appendChild(message);
+	count++;
+	}
 	})
   }
 _create() {
