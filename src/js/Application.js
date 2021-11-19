@@ -13,8 +13,6 @@ export default class Application extends EventEmitter {
 	this._beat = new Beat();
 	this._create();
 	
-  
-  _create() {
     const lyrics = ["Ah", "ha", "ha", "ha", "stayin' alive", "stayin' alive"];
     let count = 0;
 	
@@ -27,5 +25,7 @@ export default class Application extends EventEmitter {
     document.querySelector(".main").appendChild(message);
 	})
   }
+_create() {
+
 }
 }
