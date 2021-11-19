@@ -22,8 +22,9 @@ export default class Application extends EventEmitter {
 		this.emit(Beat.events.BIT);
     const message = document.createElement("div");
     message.classList.add("message");
+	
 	for (let i = 0; i < 1; i++) {
-    message.innerText = lyrics[bit];
+    message.innerText = lyrics[count];
 
     document.querySelector(".main").appendChild(message);
 	count++;
