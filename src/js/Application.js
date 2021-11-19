@@ -12,7 +12,7 @@ export default class Application extends EventEmitter {
     super();
 	this._beat = new Beat();
 	this._create();
-     
+    this.emit(Beat.events.BIT);
 	this.emit(Application.events.READY);
   }
   _create() {
@@ -20,7 +20,7 @@ export default class Application extends EventEmitter {
     let count = 0;
 	
 	this._beat.on(Beat.events.BIT, (bit) => {
-		this.emit(Beat.events.BIT);
+		
     const message = document.createElement("div");
     message.classList.add("message");
     message.innerText = lyrics[bit];
